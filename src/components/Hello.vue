@@ -1,5 +1,14 @@
 <template>
-  <h1 @click='next'>{{ msg }}</h1>
+  <div class="wrapper">
+    <transition appear name="fade">
+      <p class="hello" @click='next' v-if="skip">{{ msg }}</p>
+    </transition>
+    <transition appear name="fade">
+      <div @click="fastforward" v-if="skip">
+        <md-icon md-iconset="ion-ios-fastforward"></md-bottom-bar-item>
+      </div>
+    </transition>
+  </div>
 </template>
 
 <script>
@@ -7,7 +16,8 @@ export default {
   name: 'hello',
   data () {
     return {
-      msg: 'hello'
+      msg: 'hello',
+      skip: true
     }
   },
   methods: {
@@ -19,9 +29,15 @@ export default {
         case 'my name is mathieu':
           this.msg = 'i\'m a junior web dev'
           break
+        case 'i\'m a junior web dev':
+          this.msg = 'i\'m also french'
+          break
         default:
           this.msg = 'hello'
       }
+    },
+    fastforward: function () {
+      this.skip = !this.skip
     }
   }
 }
@@ -29,7 +45,14 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-h1 {
-  font-size: 9em;
+.hello {
+  cursor: pointer;
+  font-size: 10vw
+}
+.fade-enter-active, .fade-leave-active {
+  transition: opacity .5s
+}
+.fade-enter, .fade-leave-to /* .fade-leave-active in <2.1.8 */ {
+  opacity: 0
 }
 </style>

@@ -8,6 +8,13 @@ import 'vue-material/dist/vue-material.css'
 
 Vue.use(VueMaterial)
 
+Vue.material.registerTheme('default', {
+  primary: 'blue',
+  accent: 'red',
+  warn: 'red',
+  background: 'indigo'
+})
+
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
