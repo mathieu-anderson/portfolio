@@ -4,8 +4,10 @@
       <p class="hello" @click='next' v-if="skip">{{ msg }}</p>
     </transition>
     <transition appear name="fade">
-      <div @click="fastforward" v-if="skip">
-        <md-icon md-iconset="ion-ios-fastforward"></md-bottom-bar-item>
+      <div class="fastforward" @click="fastforward" v-if="skip">
+        <router-link to="about-me">
+          <md-button class="md-icon-button"><md-icon md-iconset="ion-ios-fastforward"></md-bottom-bar-item></md-button>
+        </router-link>
       </div>
     </transition>
   </div>

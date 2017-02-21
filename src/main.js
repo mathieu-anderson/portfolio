@@ -11,8 +11,15 @@ Vue.use(VueMaterial)
 Vue.material.registerTheme('default', {
   primary: 'blue',
   accent: 'red',
-  warn: 'red',
+  warn: 'white',
   background: 'indigo'
+})
+
+Vue.material.registerTheme('cv', {
+  primary: 'blue',
+  accent: 'indigo',
+  warn: 'indigo',
+  background: 'red'
 })
 
 /* eslint-disable no-new */
