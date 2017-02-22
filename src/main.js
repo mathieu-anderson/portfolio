@@ -8,18 +8,25 @@ import 'vue-material/dist/vue-material.css'
 
 Vue.use(VueMaterial)
 
-Vue.material.registerTheme('default', {
-  primary: 'blue',
-  accent: 'red',
-  warn: 'white',
-  background: 'indigo'
-})
-
-Vue.material.registerTheme('cv', {
-  primary: 'blue',
-  accent: 'indigo',
-  warn: 'indigo',
-  background: 'red'
+Vue.material.registerTheme({
+  default: {
+    primary: 'blue',
+    accent: 'blue',
+    warn: 'red',
+    background: 'indigo'
+  },
+  cv: {
+    primary: 'blue',
+    accent: 'indigo',
+    warn: 'red',
+    background: 'teal'
+  },
+  contact: {
+    primary: 'blue',
+    accent: 'indigo',
+    warn: 'red',
+    background: 'deep-orange'
+  }
 })
 
 /* eslint-disable no-new */

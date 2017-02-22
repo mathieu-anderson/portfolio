@@ -22,6 +22,9 @@ export default {
       skip: true
     }
   },
+  created: function () {
+    this.$material.setCurrentTheme('default')
+  },
   methods: {
     next: function () {
       switch (this.msg) {
@@ -47,6 +50,12 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+.wrapper {
+  margin-top: 40vh;
+}
+.fastforward {
+  cursor: pointer;
+}
 .hello {
   cursor: pointer;
   font-size: 10vw
