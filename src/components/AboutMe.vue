@@ -39,8 +39,17 @@
         </md-layout>
       </md-layout>
       <md-bottom-bar>
-        <router-link to="about-me"><md-bottom-bar-item md-iconset="ion-android-happy">about me</md-bottom-bar-item></router-link>
-        <router-link to="contact"><md-bottom-bar-item md-iconset="ion-android-mail">contact</md-bottom-bar-item></router-link>
+        <router-link to="about-me">
+          <md-bottom-bar-item md-iconset="ion-android-happy">
+            about me
+          </md-bottom-bar-item>
+        </router-link>
+        <router-link to="contact">
+          <md-bottom-bar-item md-iconset="ion-android-mail">
+            contact
+          </md-bottom-bar-item>
+        </router-link>
+        <router-view></router-view>
       </md-bottom-bar>
     </div>
   </transition>
@@ -51,7 +60,6 @@ export default {
   name: 'AboutMe',
   data () {
     return {
-
     }
   },
   created: function () {
@@ -97,7 +105,7 @@ export default {
 @media all and (min-width: 960px){
   .image {
     display:block;
-    background:url(http://lorempixel.com/200/200/city/) top left no-repeat;
+    background:url(http://unsplash.it/200/200) top left no-repeat;
     width:100%;
     padding-bottom:75%;
     background-size:100%;
