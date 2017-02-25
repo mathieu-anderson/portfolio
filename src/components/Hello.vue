@@ -1,24 +1,27 @@
 <template>
+  <transition appear name="fade">
   <div class="wrapper">
-    <transition appear name="fade">
-      <p class="hello" @click='next' v-if="skip">{{ msg }}</p>
-    </transition>
-    <transition appear name="fade">
+      <type class="type" :str="'Hello. \n\nMy name is Mathieu.\n\nI\'m a full stack web developer.'" :type-speed="50" v-on:done="done" :delay="2000"></type>
       <div class="fastforward" @click="fastforward" v-if="skip">
         <router-link to="about-me">
           <md-button class="md-icon-button"><md-icon md-iconset="ion-ios-fastforward"></md-bottom-bar-item></md-button>
         </router-link>
       </div>
-    </transition>
   </div>
+</transition>
 </template>
 
 <script>
+import type from './Typed.vue'
+
 export default {
   name: 'hello',
+  components: {
+    type
+  },
   data () {
     return {
-      msg: 'hello',
+      sentenceIndex: 0,
       skip: true
     }
   },
@@ -26,22 +29,11 @@ export default {
     this.$material.setCurrentTheme('default')
   },
   methods: {
-    next: function () {
-      switch (this.msg) {
-        case 'hello':
-          this.msg = 'my name is mathieu'
-          break
-        case 'my name is mathieu':
-          this.msg = 'i\'m a junior web dev'
-          break
-        case 'i\'m a junior web dev':
-          this.msg = 'i\'m also french'
-          break
-        default:
-          this.msg = 'hello'
-      }
+    done () {
+      this.sentenceIndex += 1
+      console.log('type done')
     },
-    fastforward: function () {
+    fastforward () {
       this.skip = !this.skip
     }
   }
@@ -56,9 +48,9 @@ export default {
 .fastforward {
   cursor: pointer;
 }
-.hello {
-  cursor: pointer;
-  font-size: 10vw
+.type {
+  line-height: 3vh;
+  font-size: 5vw
 }
 .fade-enter-active, .fade-leave-active {
   transition: opacity .5s
