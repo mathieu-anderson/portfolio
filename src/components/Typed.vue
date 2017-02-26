@@ -22,7 +22,7 @@ export default {
     },
     cursorChar: {
       type: String,
-      default: '|'
+      default: '.'
     },
     cleanCursor: {
       type: Boolean,
