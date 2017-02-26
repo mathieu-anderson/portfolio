@@ -2,26 +2,19 @@
   <transition appear name="fade">
     <div>
       <h1>contact me</h1>
-      <md-bottom-bar>
-        <router-link to="about-me">
-          <md-bottom-bar-item md-iconset="ion-android-happy">
-            about me
-          </md-bottom-bar-item>
-        </router-link>
-        <router-link to="contact">
-          <md-bottom-bar-item md-iconset="ion-android-mail">
-            contact
-          </md-bottom-bar-item>
-        </router-link>
-        <router-view></router-view>
-      </md-bottom-bar>
+      <bottomBar></bottomBar>
     </div>
   </transition>
 </template>
 
 <script>
+import bottomBar from './bottomBar.vue'
+
 export default {
   name: 'Contact',
+  components: {
+    bottomBar
+  },
   data () {
     return {
     }

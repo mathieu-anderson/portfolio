@@ -1,7 +1,7 @@
 <template>
   <transition appear name="fade">
   <div class="wrapper">
-      <type class="type" :str="'Hello. \n\nMy name is Mathieu.\n\nI\'m a full stack web developer.'" :type-speed="50" v-on:done="done" :delay="2000"></type>
+      <Type class="type" :str="'Hello. \n\nMy name is Mathieu.\n\nI\'m a full stack web developer.'" :type-speed="50" v-on:done="done" :delay="2000"></Type>
       <div class="fastforward" @click="fastforward" v-if="skip">
         <router-link to="about-me">
           <md-button class="md-icon-button"><md-icon md-iconset="ion-ios-fastforward"></md-bottom-bar-item></md-button>
@@ -12,12 +12,12 @@
 </template>
 
 <script>
-import type from './Typed.vue'
+import Type from './Typed.vue'
 
 export default {
   name: 'hello',
   components: {
-    type
+    Type
   },
   data () {
     return {
