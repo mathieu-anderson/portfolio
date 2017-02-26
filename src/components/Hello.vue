@@ -1,14 +1,18 @@
 <template>
-  <transition appear name="fade">
   <div class="wrapper">
-      <Type class="type" :str="'Hello. \n\nMy name is Mathieu.\n\nI\'m a full stack web developer.'" :type-speed="50" v-on:done="done" :delay="2000"></Type>
-      <div class="fastforward" @click="fastforward" v-if="skip">
-        <router-link to="about-me">
-          <md-button class="md-icon-button"><md-icon md-iconset="ion-ios-fastforward"></md-bottom-bar-item></md-button>
-        </router-link>
-      </div>
+    <div class="fastforward" @click="fastforward">
+      <router-link to="about-me">
+        <md-button class="md-icon-button"><md-icon md-iconset="ion-ios-fastforward"></md-bottom-bar-item></md-button>
+      </router-link>
+    </div>
+    <br /><br />
+    <Type class="type" :str="'Hello. \n\nMy name is Mathieu.\n\nI\'m a full stack web developer.\n\n I\'m also French.\n\n'" :type-speed="55" :cleanCursor="true" v-on:done="done" :delay="2000"></Type>
+    <Type class="type" :str="'My favourite things include: \n\n - ES6 syntax features (fat arrows!) \n\n - Exciting JS libraries (React.js! Vue.js!) \n\n - Delightful APIs (baking and consuming)\n\n - Sharing my favourite things with people'" :type-speed="50" v-if="sentenceIndex > 0" :cleanCursor="true" v-on:done="done" :delay="2000"></Type>
+    <br /><br />
+    <div @click="fastforward">
+      <md-button v-show="showButton" class="md-raised md-primary" >Want to know me better?</md-button>
+    </div>
   </div>
-</transition>
 </template>
 
 <script>
@@ -22,7 +26,8 @@ export default {
   data () {
     return {
       sentenceIndex: 0,
-      skip: true
+      skip: true,
+      showButton: false
     }
   },
   created: function () {
@@ -31,10 +36,12 @@ export default {
   methods: {
     done () {
       this.sentenceIndex += 1
-      console.log('type done')
+      if (this.sentenceIndex === 2) {
+        setTimeout(() => { this.showButton = true }, 1000)
+      }
     },
     fastforward () {
-      this.skip = !this.skip
+      this.$router.push('/about-me')
     }
   }
 }
@@ -42,20 +49,10 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-.wrapper {
-  margin-top: 40vh;
-}
 .fastforward {
   cursor: pointer;
 }
 .type {
-  line-height: 3vh;
-  font-size: 5vw
-}
-.fade-enter-active, .fade-leave-active {
-  transition: opacity .5s
-}
-.fade-enter, .fade-leave-to /* .fade-leave-active in <2.1.8 */ {
-  opacity: 0
+  font-size: 3vw
 }
 </style>
