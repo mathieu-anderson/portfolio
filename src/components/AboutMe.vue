@@ -1,6 +1,7 @@
 <template>
   <transition appear name="fade">
     <div>
+      <bottomBar></bottomBar>
       <h1>about me</h1>
       <p>
         Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
@@ -38,7 +39,6 @@
           </p>
         </md-layout>
       </md-layout>
-      <bottomBar></bottomBar>
     </div>
   </transition>
 </template>
@@ -89,10 +89,10 @@ export default {
   color: black;
   background-color: #4DB6AC;
 }
-.fade-enter-active, .fade-leave-active {
+.fade-enter-active {
   transition: opacity .5s
 }
-.fade-enter, .fade-leave-to /* .fade-leave-active in <2.1.8 */ {
+.fade-leave-active, .fade-enter, .fade-leave-to /* .fade-leave-active in <2.1.8 */ {
   opacity: 0
 }
 @media all and (min-width: 960px){

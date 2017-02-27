@@ -10,8 +10,8 @@ Vue.use(VueMaterial)
 
 Vue.material.registerTheme({
   default: {
-    primary: 'blue',
-    accent: 'blue',
+    primary: 'teal',
+    accent: 'teal',
     warn: 'red',
     background: 'indigo'
   },
@@ -22,7 +22,7 @@ Vue.material.registerTheme({
     background: 'teal'
   },
   contact: {
-    primary: 'blue',
+    primary: 'teal',
     accent: 'indigo',
     warn: 'red',
     background: 'deep-orange'

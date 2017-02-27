@@ -1,8 +1,8 @@
 <template>
   <transition appear name="fade">
     <div>
-      <h1>contact me</h1>
       <bottomBar></bottomBar>
+      <h1>contact me</h1>
     </div>
   </transition>
 </template>
@@ -28,10 +28,10 @@ export default {
 </script>
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-.fade-enter-active, .fade-leave-active {
+.fade-enter-active {
   transition: opacity .5s
 }
-.fade-enter, .fade-leave-to /* .fade-leave-active in <2.1.8 */ {
+.fade-leave-active, .fade-enter, .fade-leave-to /* .fade-leave-active in <2.1.8 */ {
   opacity: 0
 }
 </style>
