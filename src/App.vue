@@ -811,6 +811,13 @@ there.
 
 
 /* Larger than mobile */
+@media (max-width: 450px) {
+  .typing {
+    margin-left: 15%;
+    margin-right: 15%;
+  }
+}
+
 @media (min-width: 400px) {}
 
 /* Larger than phablet (also point when grid becomes active) */
