@@ -1,4 +1,5 @@
 <template>
+  <transition appear name="fade">
   <div class="wrapper">
       <div class="bottomBar">
         <md-bottom-bar>
@@ -24,6 +25,7 @@
       </div>
     </div>
   </div>
+  </transition>
 </template>
 
 <script>
@@ -64,15 +66,13 @@ export default {
   margin-left: 25%;
   margin-right: 25%;
 }
-.fastforward {
-}
 .type {
-  font-size: 3vw
+  font-size: 2.8vw;
 }
-.fade-enter-active, .fade-leave-active {
+.fade-enter-active {
   transition: opacity .5s
 }
-.fade-enter, .fade-leave-to /* .fade-leave-active in <2.1.8 */ {
+.fade-leave-active, .fade-enter, .fade-leave-to /* .fade-leave-active in <2.1.8 */ {
   opacity: 0
 }
 @media (max-width: 450px) {
