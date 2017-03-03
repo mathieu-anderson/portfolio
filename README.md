@@ -1,6 +1,6 @@
 # portfolio
 
-> My portfolio app
+My portfolio app project. Based on the `webpack` template of `vue-cli`.
 
 ## Build Setup
 
