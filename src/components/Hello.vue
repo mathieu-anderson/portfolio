@@ -1,13 +1,11 @@
 <template>
   <transition appear name="fade">
   <div class="wrapper">
-      <div class="bottomBar">
-        <md-bottom-bar>
-          <md-bottom-bar-item md-iconset="ion-ios-fastforward-outline" @click.native="fastforward">
-          </md-bottom-bar-item>
-        </md-bottom-bar>
-      </div>
-    <br /><br />
+    <bottomBar class="header" :routeName='routeName'></bottomBar>
+    <br />
+    <br />
+    <br />
+    <br />
     <div class="typing">
       <Type class="type"
       :str="`Hello. \n\nMy name is Mathieu.\n\nI\'m a full stack web developer.\n\nI\'m also French.\n\n`"
@@ -18,7 +16,7 @@
       <Type class="type"
       :str="'My favourite things include : \n\n - Exciting JS libraries (React.js! Vue.js!) \n\n - Delightful APIs (baking and consuming)\n\n - Sharing my favourite things with people'" :type-speed="50" v-if="sentenceIndex > 0" :cleanCursor="true" v-on:done="done" :delay="2000"></Type>
       <br /><br />
-      <div class="fastforward" @click="fastforward">
+      <div @click="goAbout">
         <transition appear name="fade">
           <md-button v-if="showButton" class="md-raised md-primary" >Would you like to know more?</md-button>
         </transition>
@@ -30,17 +28,20 @@
 
 <script>
 import Type from './Typed.vue'
+import bottomBar from './bottomBar.vue'
 
 export default {
   name: 'hello',
   components: {
-    Type
+    Type,
+    bottomBar
   },
   data () {
     return {
       sentenceIndex: 0,
       skip: true,
-      showButton: false
+      showButton: false,
+      routeName: this.$route.name
     }
   },
   created: function () {
@@ -53,7 +54,7 @@ export default {
         setTimeout(() => { this.showButton = true }, 1000)
       }
     },
-    fastforward () {
+    goAbout () {
       this.$router.push('/about-me')
     }
   }
@@ -65,9 +66,10 @@ export default {
 .typing {
   margin-left: 25%;
   margin-right: 25%;
+  max-height: 100%;
 }
 .type {
-  font-size: 2.8vw;
+  font-size: 2.5vw;
 }
 .fade-enter-active {
   transition: opacity .5s

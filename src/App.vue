@@ -11,6 +11,11 @@ export default {
 </script>
 
 <style>
+.header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
 #app  *    user zoom.
  */
 
