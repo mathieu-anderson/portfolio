@@ -16,13 +16,13 @@ Vue.material.registerTheme({
     background: 'indigo'
   },
   cv: {
-    primary: 'blue',
+    primary: 'deep-orange',
     accent: 'indigo',
     warn: 'red',
     background: 'teal'
   },
   contact: {
-    primary: 'teal',
+    primary: 'blue',
     accent: 'indigo',
     warn: 'red',
     background: 'deep-orange'

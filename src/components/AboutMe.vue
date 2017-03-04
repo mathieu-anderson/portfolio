@@ -1,7 +1,7 @@
 <template>
   <transition appear name="fade">
     <div>
-      <bottomBar class="header"></bottomBar>
+      <headerDefault class="header"></headerDefault>
       <br />
       <br />
       <br />
@@ -47,12 +47,12 @@
 </template>
 
 <script>
-import bottomBar from './bottomBar.vue'
+import headerDefault from './headerDefault.vue'
 
 export default {
   name: 'AboutMe',
   components: {
-    bottomBar
+    headerDefault
   },
   data () {
     return {

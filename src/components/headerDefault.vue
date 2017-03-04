@@ -1,5 +1,5 @@
 <template lang="html">
-  <div class="bottomBar">
+  <div>
     <md-bottom-bar>
       <md-bottom-bar-item md-iconset="ion-ios-home-outline" @click.native="goHome">
       </md-bottom-bar-item>
@@ -13,12 +13,15 @@
 
 <script>
 export default {
-  name: 'bottomBar',
+  name: 'headerDefault',
   data () {
     return {
     }
   },
   methods: {
+    isHello () {
+      this.routeName === 'Hello'
+    },
     goHome () {
       this.$router.push('/')
     },
