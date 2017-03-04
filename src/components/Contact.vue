@@ -1,19 +1,19 @@
 <template>
   <transition appear name="fade">
     <div>
-      <bottomBar></bottomBar>
+      <headerDefault></headerDefault>
       <h1>contact me</h1>
     </div>
   </transition>
 </template>
 
 <script>
-import bottomBar from './bottomBar.vue'
+import headerDefault from './headerDefault.vue'
 
 export default {
   name: 'Contact',
   components: {
-    bottomBar
+    headerDefault
   },
   data () {
     return {

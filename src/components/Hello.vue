@@ -1,7 +1,7 @@
 <template>
   <transition appear name="fade">
   <div class="wrapper">
-    <bottomBar class="header" :routeName='routeName'></bottomBar>
+    <headerHello class="header" v-if='isHello'></headerHello>
     <br />
     <br />
     <br />
@@ -28,13 +28,13 @@
 
 <script>
 import Type from './Typed.vue'
-import bottomBar from './bottomBar.vue'
+import headerHello from './headerHello.vue'
 
 export default {
   name: 'hello',
   components: {
     Type,
-    bottomBar
+    headerHello
   },
   data () {
     return {
@@ -48,6 +48,9 @@ export default {
     this.$material.setCurrentTheme('default')
   },
   methods: {
+    isHello () {
+      this.routeName === 'Hello'
+    },
     done () {
       this.sentenceIndex += 1
       if (this.sentenceIndex === 2) {
