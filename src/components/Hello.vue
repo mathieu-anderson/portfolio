@@ -1,13 +1,16 @@
 <template>
   <transition appear name="fade">
   <div class="wrapper">
-      <div class="bottomBar">
+      <div class="header">
         <md-bottom-bar>
           <md-bottom-bar-item md-iconset="ion-ios-fastforward-outline" @click.native="fastforward">
           </md-bottom-bar-item>
         </md-bottom-bar>
       </div>
-    <br /><br />
+      <br />
+      <br />
+      <br />
+      <br />
     <div class="typing">
       <Type class="type"
       :str="`Hello. \n\nMy name is Mathieu.\n\nI\'m a full stack web developer.\n\nI\'m also French.\n\n`"
@@ -62,12 +65,15 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+.fastforward{
+  text-align: center;
+}
 .typing {
   margin-left: 25%;
   margin-right: 25%;
 }
 .type {
-  font-size: 2.8vw;
+  font-size: 2.5vw;
 }
 .fade-enter-active {
   transition: opacity .5s

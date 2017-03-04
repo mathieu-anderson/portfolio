@@ -1,7 +1,10 @@
 <template>
   <transition appear name="fade">
     <div>
-      <bottomBar></bottomBar>
+      <bottomBar class="header"></bottomBar>
+      <br />
+      <br />
+      <br />
       <h1>contact me</h1>
     </div>
   </transition>
