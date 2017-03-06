@@ -5,43 +5,46 @@
       <br />
       <br />
       <br />
-      <h1>about me</h1>
-      <p>
-        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-      </p>
-      <md-layout>
-        <md-layout md-flex-xsmall="100" md-flex-small="100" class="block1">
-          <h2>academics</h2>
-          <div class="image"></div>
-          <p>
-            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-          </p>
+      <div class="container">
+        <h1>about me</h1>
+        <p>
+          Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
+        </p>
+        <md-layout>
+          <md-layout md-flex-xsmall="100" md-flex-small="100" md-flex-medium="100" md-flex-large="100" class="block1">
+            <md-layout md-gutter>
+              <md-layout md-flex="33">
+                <h2>Enspiral Dev Academy</h2>
+                <div class="image"></div></md-layout>
+              <md-layout md-flex="66" class="projectText">
+                  Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
+              </md-layout>
+            </md-layout>
+          </md-layout>
+          <md-layout md-flex-xsmall="100" md-flex-small="100" md-flex-medium="100" md-flex-large="100" class="block1">
+            <md-layout md-gutter>
+              <md-layout md-flex="33">
+                <h2>The tasteFight saga</h2>
+                <div class="image"></div>
+              </md-layout>
+              <md-layout md-flex="66">
+                  Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
+              </md-layout>
+            </md-layout>
+          </md-layout>
+          <md-layout md-flex-xsmall="100" md-flex-small="100" md-flex-medium="100" md-flex-large="100" class="block1">
+            <md-layout md-gutter>
+              <md-layout md-flex="33">
+                <h2>Korero Mai</h2>
+                <div class="image"></div>
+              </md-layout>
+              <md-layout md-flex="66">
+                  Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
+              </md-layout>
+            </md-layout>
+          </md-layout>
         </md-layout>
-
-        <md-layout md-flex-xsmall="100" md-flex-small="100" class="block2">
-          <h2>not coding work</h2>
-          <div class="image"></div>
-          <p>
-            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-          </p>
-        </md-layout>
-
-        <md-layout md-flex-xsmall="100" md-flex-small="100" class="block3">
-          <h2>coding work</h2>
-          <div class="image"></div>
-          <p>
-            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-          </p>
-        </md-layout>
-
-        <md-layout md-flex-xsmall="100" md-flex-small="100" class="block4">
-          <h2>personal projects</h2>
-          <div class="image"></div>
-          <p>
-            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-          </p>
-        </md-layout>
-      </md-layout>
+      </div>
     </div>
   </transition>
 </template>
@@ -58,9 +61,9 @@ export default {
     return {
     }
   },
-  created: function () {
-    this.$material.setCurrentTheme('cv')
-  },
+  // created: function () {
+  //   this.$material.setCurrentTheme('cv')
+  // },
   methods: {
 
   }
@@ -69,28 +72,35 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+div {
+  color: black;
+}
+.container {
+  margin-left: 15%;
+  margin-right: 15%;
+}
 .image {
   display: none;
 }
 .block1 {
   padding: 1em;
   color: black;
-  background-color: #E0F2F1;
+  /*background-color: #FF5722;*/
 }
 .block2 {
   padding: 1em;
   color: black;
-  background-color: #B2DFDB;
+  /*background-color: #FF7043;*/
 }
 .block3 {
   padding: 1em;
   color: black;
-  background-color: #80CBC4;
+  /*background-color: #FF8A65;*/
 }
 .block4 {
   padding: 1em;
   color: black;
-  background-color: #4DB6AC;
+  /*background-color: #FFAB91;*/
 }
 .fade-enter-active {
   transition: opacity .5s
@@ -103,8 +113,7 @@ export default {
     display:block;
     background:url(http://unsplash.it/200/200) top left no-repeat;
     width:100%;
-    padding-bottom:75%;
-    background-size:100%;
+    padding-bottom: 65%;
   }
 }
 </style>

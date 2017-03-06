@@ -44,9 +44,9 @@ export default {
       routeName: this.$route.name
     }
   },
-  created: function () {
-    this.$material.setCurrentTheme('default')
-  },
+  // created: function () {
+  //   this.$material.setCurrentTheme('default')
+  // },
   methods: {
     isHello () {
       this.routeName === 'Hello'
