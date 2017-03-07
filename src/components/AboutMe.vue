@@ -1,17 +1,20 @@
 <template lang="html">
   <transition appear name="fade">
     <div class="container">
-      <headerDefault></headerDefault>
+      <headerDefault />
       <br />
       <br />
       <br />
       <div class="box aboutBox">
         <h1>about me</h1>
         <div class="socialBox">
-          <md-bottom-bar-item md-iconset="ion-ios-paper-outline" href="static/CV_Mathieu_ANDERSON.pdf" />
-          <md-bottom-bar-item md-iconset="ion-social-github" href="https://github.com/mathieu-anderson" />
-          <md-bottom-bar-item md-iconset="ion-social-linkedin-outline" href="https://www.linkedin.com/in/mathieuanderson/" />
-          <md-bottom-bar-item md-iconset="ion-ios-email-outline" href="mailto:mathieu.hj.anderson@gmail.com" />
+          <div class=".ion-android-calendar:before">
+            test
+          </div>
+          <a href="static/CV_Mathieu_ANDERSON.pdf"><md-icon class="md-size-2x pointer grow" md-iconset="ion-ios-paper-outline" /></a>
+          <md-icon class="md-size-2x pointer grow" md-iconset="ion-social-github" href="https://github.com/mathieu-anderson" />
+          <md-icon class="md-size-2x pointer grow" md-iconset="ion-social-linkedin-outline" href="https://www.linkedin.com/in/mathieuanderson/" />
+          <md-icon class="md-size-2x pointer grow" md-iconset="ion-ios-email-outline" href="mailto:mathieu.hj.anderson@gmail.com"/>
         </div>
         <div>
           Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
@@ -72,6 +75,11 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
+@import url('http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css');
+
+.pointer:hover {
+  cursor: pointer;
+}
 .image {
   display: none;
 }
@@ -80,6 +88,19 @@ export default {
 }
 .fade-leave-active, .fade-enter, .fade-leave-to /* .fade-leave-active in <2.1.8 */ {
   opacity: 0
+}
+.grow {
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px transparent;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+}
+.grow:hover, .grow:focus, .grow-active {
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
 }
 @media all and (min-width: 960px){
   .image {

@@ -5,10 +5,11 @@ $borderBottom: 1px dotted black;
 h1 {
   color: $deepOrange;
   font: {
-    size: 4em;
+    size: 6em;
     weight: normal;
     family: 'arial'
   }
+  text-align: center;
 }
 
 h2 {
@@ -31,31 +32,36 @@ h2 {
 }
 
 .headerBox {
+  background-color: white;
   width: 100vw;
   border: $borderBottom;
   flex: 0 0 auto;
+  text-align: center;
+  align-self: flex-start;
+  position: fixed;
 }
 
 .aboutBox {
-  border: $borderBottom
+  border: $borderBottom;
 }
 
 .socialBox {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
+  text-align: center;
 }
 
 .projectBox {
   display:flex;
+  flex: 0 0 auto;
 }
 
 .titleBox {
-  border: $borderBottom
+  border: $borderBottom;
+  flex: 0 0 30vw;
 }
 
 .textBox {
-  border: $borderBottom
+  border: $borderBottom;
+  flex: 0 0 70vw;
 }
 
 .box1 {
