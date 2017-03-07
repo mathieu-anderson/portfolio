@@ -1,7 +1,7 @@
 <template>
   <transition appear name="fade">
   <div class="wrapper">
-    <headerHello class="header" v-if='isHello'></headerHello>
+    <headerHello class="box headerBox"></headerHello>
     <br />
     <br />
     <br />
@@ -48,9 +48,6 @@ export default {
   //   this.$material.setCurrentTheme('default')
   // },
   methods: {
-    isHello () {
-      this.routeName === 'Hello'
-    },
     done () {
       this.sentenceIndex += 1
       if (this.sentenceIndex === 2) {
@@ -72,7 +69,7 @@ export default {
 .typing {
   margin-left: 25%;
   margin-right: 25%;
-  max-height: 100%;
+  max-height: 100vh;
 }
 .type {
   font-size: 2.5vw;

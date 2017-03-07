@@ -1,5 +1,68 @@
 $deepOrange: #FF5722;
+$vueTeal: #41b883;
+$borderBottom: 1px dotted black;
 
 h1 {
   color: $deepOrange;
+  font: {
+    size: 4em;
+    weight: normal;
+    family: 'arial'
+  }
+}
+
+h2 {
+  color: $vueTeal;
+  font: {
+    size: 2em;
+    weight: normal;
+    family: 'cursive'
+  }
+}
+
+.container {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+.box {
+  border: $borderBottom
+}
+
+.headerBox {
+  width: 100vw;
+  border: $borderBottom;
+}
+
+.aboutBox {
+  border: $borderBottom
+}
+
+.projectBox {
+  display:flex;
+}
+
+.titleBox {
+  border: $borderBottom
+}
+
+.textBox {
+  border: $borderBottom
+}
+
+.box1 {
+  border: $borderBottom
+}
+
+.box2 {
+  border: $borderBottom
+}
+
+.box3 {
+  border: $borderBottom
+}
+
+.image {
+  border: $borderBottom
 }
