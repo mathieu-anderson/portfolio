@@ -33,10 +33,17 @@ h2 {
 .headerBox {
   width: 100vw;
   border: $borderBottom;
+  flex: 0 0 auto;
 }
 
 .aboutBox {
   border: $borderBottom
+}
+
+.socialBox {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 }
 
 .projectBox {

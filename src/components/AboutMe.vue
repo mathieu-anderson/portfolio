@@ -1,14 +1,21 @@
-<template>
+<template lang="html">
   <transition appear name="fade">
     <div class="container">
-      <headerDefault class="box headerBox"></headerDefault>
+      <headerDefault></headerDefault>
       <br />
       <br />
       <br />
       <div class="box aboutBox">
         <h1>about me</h1>
-        <p>
+        <div class="socialBox">
+          <md-bottom-bar-item md-iconset="ion-ios-paper-outline" href="static/CV_Mathieu_ANDERSON.pdf" />
+          <md-bottom-bar-item md-iconset="ion-social-github" href="https://github.com/mathieu-anderson" />
+          <md-bottom-bar-item md-iconset="ion-social-linkedin-outline" href="https://www.linkedin.com/in/mathieuanderson/" />
+          <md-bottom-bar-item md-iconset="ion-ios-email-outline" href="mailto:mathieu.hj.anderson@gmail.com" />
+        </div>
+        <div>
           Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
+        </div>
         </p>
       </div>
       <div class="box box1 projectBox">
@@ -64,11 +71,10 @@ export default {
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
+<style scoped lang="scss">
 .image {
   display: none;
 }
-
 .fade-enter-active {
   transition: opacity .5s
 }
