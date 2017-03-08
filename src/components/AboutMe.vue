@@ -8,13 +8,10 @@
       <div class="box aboutBox">
         <h1>about me</h1>
         <div class="socialBox">
-          <div class=".ion-android-calendar:before">
-            test
-          </div>
-          <a href="static/CV_Mathieu_ANDERSON.pdf"><md-icon class="md-size-2x pointer grow" md-iconset="ion-ios-paper-outline" /></a>
-          <md-icon class="md-size-2x pointer grow" md-iconset="ion-social-github" href="https://github.com/mathieu-anderson" />
-          <md-icon class="md-size-2x pointer grow" md-iconset="ion-social-linkedin-outline" href="https://www.linkedin.com/in/mathieuanderson/" />
-          <md-icon class="md-size-2x pointer grow" md-iconset="ion-ios-email-outline" href="mailto:mathieu.hj.anderson@gmail.com"/>
+          <a href="static/CV_Mathieu_ANDERSON.pdf"><i class="ion-ios-paper-outline grow"></a>
+          <a href="https://github.com/mathieu-anderson"><i class="ion-social-github grow"></a>
+          <a href="https://www.linkedin.com/in/mathieuanderson/"><i class="ion-social-linkedin-outline grow"></a>
+          <a href="mailto:mathieu.hj.anderson@gmail.com"><i class="ion-ios-email-outline grow"></a>
         </div>
         <div>
           Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
@@ -74,12 +71,9 @@ export default {
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped lang="scss">
+<style lang="scss">
 @import url('http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css');
 
-.pointer:hover {
-  cursor: pointer;
-}
 .image {
   display: none;
 }
@@ -90,6 +84,7 @@ export default {
   opacity: 0
 }
 .grow {
+  padding: 0.5em;
   -webkit-transform: perspective(1px) translateZ(0);
   transform: perspective(1px) translateZ(0);
   box-shadow: 0 0 1px transparent;

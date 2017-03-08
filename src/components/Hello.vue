@@ -3,9 +3,6 @@
   <div class="wrapper">
     <headerHello class="box headerBox"></headerHello>
     <br />
-    <br />
-    <br />
-    <br />
     <div class="typing">
       <Type class="type"
       :str="`Hello. \n\nMy name is Mathieu.\n\nI\'m a full stack web developer.\n\nI\'m also French.\n\n`"
@@ -18,7 +15,7 @@
       <br /><br />
       <div @click="goAbout">
         <transition appear name="fade">
-          <md-button v-if="showButton" class="md-raised md-primary" >Would you like to know more?</md-button>
+          <i v-if="showButton" class="ion-ios-redo-outline link grow"/>
         </transition>
       </div>
     </div>
@@ -63,8 +60,24 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-.fastforward{
-  text-align: center;
+.link {
+  font-size: 3vw;
+}
+.link:hover {
+  cursor: pointer;
+}
+.grow {
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px transparent;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+}
+.grow:hover, .grow:focus, .grow-active {
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
 }
 .typing {
   margin-left: 25%;
@@ -72,6 +85,7 @@ export default {
   max-height: 100vh;
 }
 .type {
+  font-family: lato;
   font-size: 2.5vw;
 }
 .fade-enter-active {

@@ -1,19 +1,19 @@
-$deepOrange: #FF5722;
-$vueTeal: #41b883;
+$deepRed: #B82601;
+$deepIndigo: #1A237E;
 $borderBottom: 1px dotted black;
 
 h1 {
-  color: $deepOrange;
+  color: $deepRed;
   font: {
     size: 6em;
-    weight: normal;
-    family: 'arial'
+    weight: lighter;
+    family: 'lato';
   }
   text-align: center;
 }
 
 h2 {
-  color: $vueTeal;
+  color: $deepIndigo;
   font: {
     size: 2em;
     weight: normal;
@@ -47,6 +47,7 @@ h2 {
 
 .socialBox {
   text-align: center;
+  font-size: 2.5em;
 }
 
 .projectBox {

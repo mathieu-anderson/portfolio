@@ -1,5 +1,5 @@
 <template lang="html">
-  <md-bottom-bar>
+  <md-bottom-bar class="headerBox">
     <md-bottom-bar-item md-iconset="ion-ios-fastforward-outline" @click.native="goAbout">
     </md-bottom-bar-item>
   </md-bottom-bar>
