@@ -8,40 +8,30 @@ import 'vue-material/dist/vue-material.css'
 
 Vue.use(VueMaterial)
 
-// Vue.material.registerTheme({
-//   default: {
-//     primary: 'indigo',
-//     accent: 'teal',
-//     warn: 'red',
-//     background: 'white'
-//   },
-//   headerHello: {
-//     primary: 'white',
-//     accent: 'teal',
-//     warn: 'red',
-//     background: 'indigo'
-//   },
-//   headerAbout: {
-//     background: 'deep-orange'
-//   }
-// })
-//
-// Vue.material.registerTheme('cv', {
+Vue.material.registerTheme({
+  default: {
+    primary: 'indigo',
+    accent: 'black',
+    warn: 'red',
+    background: 'white'
+  }
+})
+
+// Vue.material.registerTheme('default', {
 //   primary: {
-//     color: 'grey',
-//     hue: '100'
+//     color: 'indigo',
+//     hue: '900'
 //   },
 //   accent: {
-//     color: 'deep-orange',
-//     hue: '500'
+//     color: 'red',
+//     hue: '800'
 //   },
 //   warn: {
 //     color: 'red',
-//     hue: '500'
+//     hue: '900'
 //   },
 //   background: {
-//     color: 'deep-orange',
-//     hue: '500'
+//     color: 'white'
 //   }
 // })
 

@@ -1,49 +1,49 @@
-<template>
+<template lang="html">
   <transition appear name="fade">
-    <div>
-      <headerDefault class="header"></headerDefault>
+    <div class="container">
+      <headerDefault />
       <br />
       <br />
       <br />
-      <div class="container">
+      <div class="box aboutBox">
         <h1>about me</h1>
-        <p>
+        <div class="socialBox">
+          <a href="static/CV_Mathieu_ANDERSON.pdf"><i class="ion-ios-paper-outline grow"></a>
+          <a href="https://github.com/mathieu-anderson"><i class="ion-social-github grow"></a>
+          <a href="https://www.linkedin.com/in/mathieuanderson/"><i class="ion-social-linkedin-outline grow"></a>
+          <a href="mailto:mathieu.hj.anderson@gmail.com"><i class="ion-ios-email-outline grow"></a>
+        </div>
+        <div>
           Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
+        </div>
         </p>
-        <md-layout>
-          <md-layout md-flex-xsmall="100" md-flex-small="100" md-flex-medium="100" md-flex-large="100" class="block1">
-            <md-layout md-gutter>
-              <md-layout md-flex="33">
-                <h2>Enspiral Dev Academy</h2>
-                <div class="image"></div></md-layout>
-              <md-layout md-flex="66" class="projectText">
-                  Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
-              </md-layout>
-            </md-layout>
-          </md-layout>
-          <md-layout md-flex-xsmall="100" md-flex-small="100" md-flex-medium="100" md-flex-large="100" class="block1">
-            <md-layout md-gutter>
-              <md-layout md-flex="33">
-                <h2>The tasteFight saga</h2>
-                <div class="image"></div>
-              </md-layout>
-              <md-layout md-flex="66">
-                  Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
-              </md-layout>
-            </md-layout>
-          </md-layout>
-          <md-layout md-flex-xsmall="100" md-flex-small="100" md-flex-medium="100" md-flex-large="100" class="block1">
-            <md-layout md-gutter>
-              <md-layout md-flex="33">
-                <h2>Korero Mai</h2>
-                <div class="image"></div>
-              </md-layout>
-              <md-layout md-flex="66">
-                  Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
-              </md-layout>
-            </md-layout>
-          </md-layout>
-        </md-layout>
+      </div>
+      <div class="box box1 projectBox">
+        <div class="titleBox">
+          <h2>Enspiral Dev Academy</h2>
+          <div class="image"></div>
+        </div>
+        <div class="textBox">
+          Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
+        </div>
+      </div>
+      <div class="box box2 projectBox">
+        <div class="titleBox">
+          <h2>The tasteFight saga</h2>
+          <div class="image"></div>
+        </div>
+        <div class="textBox">
+          Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
+        </div>
+      </div>
+      <div class="box box3 projectBox">
+        <div class="titleBox">
+          <h2>Korero Mai</h2>
+          <div class="image"></div>
+        </div>
+        <div class="textBox">
+          Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
+        </div>
       </div>
     </div>
   </transition>
@@ -71,42 +71,31 @@ export default {
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
-div {
-  color: black;
-}
-.container {
-  margin-left: 15%;
-  margin-right: 15%;
-}
+<style lang="scss">
+@import url('http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css');
+
 .image {
   display: none;
-}
-.block1 {
-  padding: 1em;
-  color: black;
-  /*background-color: #FF5722;*/
-}
-.block2 {
-  padding: 1em;
-  color: black;
-  /*background-color: #FF7043;*/
-}
-.block3 {
-  padding: 1em;
-  color: black;
-  /*background-color: #FF8A65;*/
-}
-.block4 {
-  padding: 1em;
-  color: black;
-  /*background-color: #FFAB91;*/
 }
 .fade-enter-active {
   transition: opacity .5s
 }
 .fade-leave-active, .fade-enter, .fade-leave-to /* .fade-leave-active in <2.1.8 */ {
   opacity: 0
+}
+.grow {
+  padding: 0.5em;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px transparent;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+}
+.grow:hover, .grow:focus, .grow-active {
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
 }
 @media all and (min-width: 960px){
   .image {

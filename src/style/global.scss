@@ -1,5 +1,82 @@
-$deepOrange: #FF5722;
+$deepRed: #B82601;
+$deepIndigo: #1A237E;
+$borderBottom: 1px dotted black;
 
 h1 {
-  color: $deepOrange;
+  color: $deepRed;
+  font: {
+    size: 6em;
+    weight: lighter;
+    family: 'lato';
+  }
+  text-align: center;
+}
+
+h2 {
+  color: $deepIndigo;
+  font: {
+    size: 2em;
+    weight: normal;
+    family: 'cursive'
+  }
+}
+
+.container {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+.box {
+  border: $borderBottom
+}
+
+.headerBox {
+  background-color: white;
+  width: 100vw;
+  border: $borderBottom;
+  flex: 0 0 auto;
+  text-align: center;
+  align-self: flex-start;
+  position: fixed;
+}
+
+.aboutBox {
+  border: $borderBottom;
+}
+
+.socialBox {
+  text-align: center;
+  font-size: 2.5em;
+}
+
+.projectBox {
+  display:flex;
+  flex: 0 0 auto;
+}
+
+.titleBox {
+  border: $borderBottom;
+  flex: 0 0 30vw;
+}
+
+.textBox {
+  border: $borderBottom;
+  flex: 0 0 70vw;
+}
+
+.box1 {
+  border: $borderBottom
+}
+
+.box2 {
+  border: $borderBottom
+}
+
+.box3 {
+  border: $borderBottom
+}
+
+.image {
+  border: $borderBottom
 }

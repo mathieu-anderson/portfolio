@@ -1,10 +1,8 @@
 <template lang="html">
-  <div class="header">
-    <md-bottom-bar>
-      <md-bottom-bar-item md-iconset="ion-ios-fastforward-outline" @click.native="goAbout">
-      </md-bottom-bar-item>
-    </md-bottom-bar>
-  </div>
+  <md-bottom-bar class="headerBox">
+    <md-bottom-bar-item md-iconset="ion-ios-fastforward-outline" @click.native="goAbout">
+    </md-bottom-bar-item>
+  </md-bottom-bar>
 </template>
 
 <script>
